@@ -1,6 +1,7 @@
 {
   "name": "rentify",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -35,8 +36,15 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-tailwindcss": "^3.18.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.5.0",
     "tailwindcss": "~3.4.17",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,json,mjs}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ]
   }
 }

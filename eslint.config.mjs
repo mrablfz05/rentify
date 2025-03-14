@@ -18,18 +18,6 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  {
-    ignores: [
-      "node_modules/",
-      "public/",
-      ".next/",
-      "dist/",
-      "*.json",
-      "*.svg",
-      "*.config.js",
-      "*.config.mjs",
-    ],
-  },
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
@@ -58,28 +46,17 @@ const eslintConfig = [
     rules: {
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
-
-      "prettier/prettier": [
-        "error",
-        {
-          semi: true,
-          singleQuote: false,
-        },
-      ],
-
+      "prettier/prettier": ["error", { semi: true, singleQuote: false }],
       "react/jsx-filename-extension": ["warn", { extensions: [".tsx"] }],
       "react/react-in-jsx-scope": "off",
       "jsx-a11y/anchor-is-valid": "off",
-
       "@typescript-eslint/no-unused-vars": [
         "warn",
         { argsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-function-return-type": "off",
-
       "tailwindcss/no-custom-classname": "off",
-
       "no-console": ["warn", { allow: ["warn", "error"] }],
     },
     settings: {
