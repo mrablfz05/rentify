@@ -1,0 +1,20 @@
+
+D:\RESUMEPROJECT\rentify\src
+├── app
+├── assets
+├── components
+├── constants
+├── hooks
+├── pages
+├── project-tree.txt
+├── services
+├── store
+├── styles
+├── types
+└── utils
+
+directory: 11 file: 1
+
+
+
+[2K[1G
